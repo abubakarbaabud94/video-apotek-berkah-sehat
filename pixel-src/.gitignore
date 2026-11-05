@@ -1,0 +1,5 @@
+*.png
+mix_v*.wav
+out*.mp4
+__pycache__/
+*_video.mp4
