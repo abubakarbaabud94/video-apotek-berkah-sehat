@@ -1,0 +1,24 @@
+# NASKAH VO (untuk Supertonic 3) — ep07-efek-samping-obat
+# Topik: Efek samping obat, wajar atau bahaya
+# Perkiraan durasi: 55-60 dtk (~150 kata). Klaim medis perlu dicek APJ sebelum tayang.
+
+Habis minum obat, perut mual atau jadi ngantuk. Wajar, atau bahaya? <breath>
+Semua obat bisa punya efek samping. Yang ringan, seperti mual, mengantuk, atau mulut kering, sering muncul di awal dan biasanya hilang sendiri. Cek di brosur kemasan, atau tanya apoteker. <breath>
+Tapi waspada kalau muncul bentol merah dan gatal di seluruh badan, bibir atau kelopak mata bengkak, sesak napas, atau nyaris pingsan. Itu bisa tanda alergi. Hentikan obatnya, dan segera cari pertolongan medis. <breath>
+Jangan menunggu, dan jangan minum obat lain untuk menutupi gejalanya.
+Efek ringan tapi mengganggu terus? Untuk obat dari dokter, jangan berhenti sendiri. Tanyakan dulu. <breath>
+Catat nama obat yang bikin reaksi, dan sampaikan ke apoteker dan dokter, supaya tidak diberikan lagi.
+Ragu efek sampingmu wajar atau tidak? Tanya apoteker kami di Apotek Berkah Sehat Kudus.
+Konsultasi dulu, baru minum.
+
+# ---- RENCANA ADEGAN (untuk render9.py, impor dari render8) ----
+# s1 Hook     : Raka pegang perut/ngantuk di konter apotek; teks "WAJAR / BAHAYA?" dua chip (hijau / merah)
+# s2 Ringan   : chip MUAL, NGANTUK, MULUT KERING -> centang hijau "SERING HILANG SENDIRI"; ikon brosur "CEK BROSUR"
+# s3 Bahaya   : mark_row merah: BENTOL & GATAL, BIBIR/MATA BENGKAK, SESAK NAPAS, NYARIS PINGSAN -> stempel "HENTIKAN & CARI BANTUAN"
+# s4 Jangan   : "JANGAN MENUNGGU", "JANGAN TUTUPI DENGAN OBAT LAIN" (silang)
+# s5 Obat dokter: botol resep + "JANGAN BERHENTI SENDIRI -> TANYA DULU"
+# s6 Catat    : buku catatan "CATAT NAMA OBATNYA" -> kasih tahu apoteker & dokter
+# s7 Apoteker : apotek_int, "TANYA APOTEKER KAMI"
+# s8 Closing  : sc_cta + "KONSULTASI DULU, BARU MINUM."
+#
+# Alur: Abu rekam VO -> kirim wav -> bersihkan (ffmpeg) -> words_*.json (faster-whisper) -> render9.py + audio9.py

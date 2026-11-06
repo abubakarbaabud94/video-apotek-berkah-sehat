@@ -12,8 +12,9 @@ Video edukasi obat format TikTok 1080×1920, 30 fps, gaya pixel art. Semua visua
 | 4 | Generik vs bermerek | `pixel-ep04-generik-vs-bermerek.mp4` | `render6.py` | `audio6.py` | `vo/vo_generik.wav` | `words/words_generik.json` |
 | 5 | Cara minum obat | `pixel-ep05-cara-minum-obat.mp4` | `render7.py` | `audio7.py` | `vo/vo_minum.wav` | `words/words_minum.json` |
 | 6 | Jangan campur obat | `pixel-ep06-jangan-campur-obat.mp4` | `render8.py` | `audio8.py` | `vo/vo_campur.wav` | `words/words_campur.json` |
+| 7 | Efek samping obat | `pixel-ep07-efek-samping-obat.mp4` | `render9.py` | `audio9.py` | `vo/vo_efek.wav` | `words/words_efek.json` |
 
-`render2.py` adalah engine inti: palet, sprite, kamera, lighting, kartu/teks HUD, transisi wipe, CTA. Episode berikutnya mengimpor episode sebelumnya, misalnya `render8` → `render7` → `render6` → `render5` → `render4` → `render2`. Jadi jangan hapus file lama.
+`render2.py` adalah engine inti: palet, sprite, kamera, lighting, kartu/teks HUD, transisi wipe, CTA. Episode berikutnya mengimpor episode sebelumnya, misalnya `render9` → `render8` → `render7` → `render6` → `render5` → `render4` → `render2`. Jadi jangan hapus file lama.
 
 ## Alur kerja per episode
 
@@ -51,6 +52,5 @@ Video edukasi obat format TikTok 1080×1920, 30 fps, gaya pixel art. Semua visua
 
 ## Ide episode berikutnya
 
-- Kapan ke dokter, kapan cukup ke apotek
-- Efek samping obat: wajar atau bahaya
+- Kapan ke dokter, kapan cukup ke apotek (sempat diusulkan untuk ep07, ditolak)
 - Alergi obat
